@@ -1,5 +1,3 @@
--- Learning Haskell
-
 main :: IO ()
 main = do putStrLn "Hello World"
 
@@ -77,3 +75,14 @@ tell [] = "A lista esta vazia"
 tell (x:[]) = "A lista tem apenas um elemento: " ++ show x  
 tell (x:y:[]) = "A lista tem dois elementos: " ++ show x ++ " e " ++ show y  
 tell (x:y:_) = "Esta lista esta longa demais. Veja os dois primeiros elementos: " ++ show x ++ " e " ++ show y
+
+--------
+
+length' :: (Num b) => [a] -> b  
+length' [] = 0  
+length' (_:xs) = 1 + length' xs  -- dividindo lista entre 1º termo e resto (xs = resto) soma
+-- soma o resto + 1 para obter o tamanho da lista.
+---------------
+
+
+
