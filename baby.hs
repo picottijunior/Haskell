@@ -18,3 +18,6 @@ centopeia = [1,2,3,4,5]
 triangles = [ (a,b,c) | c <- [1..10], b <- [1..10], a <- [1..10] ]
 rightTriangles = [ (a,b,c) | c <- [1..10], b <- [1..c], a <- [1..b], a^2 + b^2 == c^2]
 rightTriangles' = [ (a,b,c) | c <- [1..10], b <- [1..c], a <- [1..b], a^2 + b^2 == c^2, a+b+c == 24]
+
+
+derivada x n = n * x^(n-1)
